@@ -1,0 +1,40 @@
+<h1>Edit product</h1>
+
+{{#if error}}
+    <p class="alert">{{error}}</p>
+{{/if}}
+
+<form class="edit-form" action="/products/edit" method="POST">
+    <div class="input-field">
+        <input placeholder="Title" name="title" id="title" type="text" class="validate" 
+        value="{{product.title}}"
+        required>
+        <label for="title">Title</label>
+        <span class="helper-text" data-error="This fiel is mundatory"></span>
+    </div>
+    <div class="input-field">
+        <input placeholder="Description" name="description" id="description" type="text" class="validate" 
+        value="{{product.description}}"
+        required>
+        <label for="description">Description</label>
+        <span class="helper-text" data-error="This fiel is mundatory"></span>
+    </div>
+    <div class="input-field">
+        <input placeholder="Price" name="price" id="price" type="text" class="validate" r
+        value="{{product.price}}"
+        rquired>
+        <label for="price">Price</label>
+        <span class="helper-text" data-error="This fiel is mundatory"></span>
+    </div>
+
+    <input type="hidden" name="id" value="{{product.id}}">
+    <input type="hidden" name="_csrf" value="{{csrf}}">
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+<form action="/products/delete" method="POST">
+    <input type="hidden" name="id" value="{{product.id}}">
+    <input type="hidden" name="_csrf" value="{{csrf}}">
+    <button type="submit" class="btn red">Delete</button>
+</form>

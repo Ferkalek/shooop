@@ -1,0 +1,39 @@
+<h1>Profile</h1>
+
+<div class="row">
+    <div class="col s6">
+        {{#if user.avatarUrl}}
+        <img class="avatar"
+            src="/{{user.avatarUrl}}" 
+            alt="avatar-{{user.name}}">
+        {{else}}
+        <p>Does not avatar</p>
+        {{/if}}
+    </div>
+
+    <div class="col s6">
+        <form action="/profile" method="POST" enctype="multipart/form-data">
+            <p>Your email <strong style="color: gray">{{user.email}}</strong></p>
+            <div class="input-field">
+                <input placeholder="Name" name="name" id="name" type="text" 
+                    value="{{user.name}}" class="validate" required>
+                <label for="name">Your name</label>
+                <span class="helper-text" data-error="This fiel is mundatory"></span>
+            </div>
+
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>Upload avatar</span>
+                    <input type="file" name="avatar">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+
+            <input type="hidden" name="_csrf" value="{{csrf}}">
+
+            <button class="btn" type="submit">Save</button>
+        </form>
+    </div>
+</div>

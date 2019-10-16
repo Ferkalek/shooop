@@ -1,0 +1,30 @@
+<h1>Add product page</h1>
+
+{{#if error}}
+    <p class="alert">{{error}}</p>
+{{/if}}
+
+<form action="/add-product" method="POST">
+    <div class="input-field">
+        <input placeholder="Title" name="title" id="title" type="text" 
+            value="{{data.title}}" class="validate" required>
+        <label for="title">Title</label>
+        <span class="helper-text" data-error="This fiel is mundatory"></span>
+    </div>
+    <div class="input-field">
+        <input placeholder="Description" name="description" id="description" 
+            value="{{data.description}}" type="text" class="validate" required>
+        <label for="description">Description</label>
+        <span class="helper-text" data-error="This fiel is mundatory"></span>
+    </div>
+    <div class="input-field">
+        <input placeholder="Price" name="price" id="price" type="text" 
+            value="{{data.price}}" class="validate" required>
+        <label for="price">Price</label>
+        <span class="helper-text" data-error="This fiel is mundatory"></span>
+    </div>
+
+    <input type="hidden" name="_csrf" value="{{csrf}}">
+
+    <button class="btn btn-primary" type="submit">Add</button>
+</form>

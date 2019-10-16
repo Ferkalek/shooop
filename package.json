@@ -1,0 +1,36 @@
+{
+  "name": "app_express_mongo_db",
+  "version": "1.0.0",
+  "description": "framework express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "Anton Ferkalek <ferkalekanton@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^2.2.0",
+    "csurf": "^1.10.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.2.0",
+    "helmet": "^3.21.1",
+    "mongoose": "^5.7.3",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.3.1",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}

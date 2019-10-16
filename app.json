@@ -1,0 +1,26 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "BASE_URL": "https://thawing-forest-95556.herokuapp.com",
+    "EMAIL_FROM": "send@mfolio.inf.ua",
+    "MONGODB_URL": "mongodb://bdadmin:Rq5jumVWmakYDfaW@cluster0-shard-00-00-4fmlh.mongodb.net:27017,cluster0-shard-00-01-4fmlh.mongodb.net:27017,cluster0-shard-00-02-4fmlh.mongodb.net:27017/shopooo?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority",
+    "SENDGRID_API_KEY": "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",
+    "SESSION_SECRET": "some secret value"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "shooop",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
